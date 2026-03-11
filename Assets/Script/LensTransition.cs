@@ -1,16 +1,37 @@
 using UnityEngine;
+using System.Collections;
 
 public class LensTransition : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] GameObject mainScreen;
+
+    [SerializeField] Animator animator;
+    [SerializeField] CameraSwitch cameraSwitch;
+
+    private bool isTransitioning = false;
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Tab) && !isTransitioning)
+        {
+
+            StartCoroutine(SpaceStart());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator SpaceStart()
     {
-        
+        isTransitioning = true;
+
+        if (mainScreen.activeSelf)
+        {
+            animator.SetTrigger("Transition");
+
+            yield return new WaitForSeconds(1.3f);
+
+            cameraSwitch.ChangePOV();
+        }
+
+        isTransitioning = false;
     }
 }
