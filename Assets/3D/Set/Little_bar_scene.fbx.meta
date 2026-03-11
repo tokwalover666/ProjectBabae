@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: a2bda8b241352604f95a1f129badef6e
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_box
+    second: {fileID: 2100000, guid: 8c04c3f6d496422418ebe852d08bc4d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_check_book
+    second: {fileID: 2100000, guid: 302f44580522e4d4aa322a6c6d6ee70c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_wood_02
+    second: {fileID: 2100000, guid: e55b29dc1719a6d4abce69ff9797cb60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_wood_03
+    second: {fileID: 2100000, guid: d184d0b96f8acad479840a1db15d1a97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_wood_04
+    second: {fileID: 2100000, guid: cd298fd76188abb4884f87a8378fd7c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquid_1
+    second: {fileID: 2100000, guid: 918749052865a3048a44f9013eceb952, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquid_2
+    second: {fileID: 2100000, guid: 0a70e5cdbc21a4e4ba6d773a2e457280, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquid_wine
+    second: {fileID: 2100000, guid: 4a4fae16b7abe5347ae4ad0f7972d034, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquid_wine_white
+    second: {fileID: 2100000, guid: 95a07863f7e1c6140b3251209b8e3cb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Bar_stools
+    second: {fileID: 2100000, guid: c9edead903e11ee4993531e38673f91e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Bar_wood
+    second: {fileID: 2100000, guid: 2f061a87354780f47bed1adee6e169f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Bear_metal_01
+    second: {fileID: 2100000, guid: cfb765600e610d44c8deb9401e3e2846, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Bear_metal_02
+    second: {fileID: 2100000, guid: 608913cabc448c24f90898410af46dd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Bear_metal_03
+    second: {fileID: 2100000, guid: b0acebb6e524cf54b96ddd0de0ad1447, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Cable_black
+    second: {fileID: 2100000, guid: bd7f57b7890344a4695ec72f89cc57a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Candle
+    second: {fileID: 2100000, guid: 38db9c4d7f42c724a85ca1c6d913a5b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Candle_fire_01
+    second: {fileID: 2100000, guid: 8aeb43e6feb4fba43ba3050227d446d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Candle_fire_02
+    second: {fileID: 2100000, guid: 7962a2b084feb91429347009e0d71ceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Chairs
+    second: {fileID: 2100000, guid: f579e626ab359a042890a95f06fd2a22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Cold_water_botton
+    second: {fileID: 2100000, guid: 2fb95bd295da75e4c840569352de4182, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Drink_01
+    second: {fileID: 2100000, guid: 53987be492ea1034188dd94804d7570d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Floor
+    second: {fileID: 2100000, guid: 2ceeb121433285349914841434e3503d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_01
+    second: {fileID: 2100000, guid: c9b3e5707a7411f43b34b2166227c3e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_02
+    second: {fileID: 2100000, guid: 966a5bdffc6b0fd408aeaf3f567b9bbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_03
+    second: {fileID: 2100000, guid: 7de1599e2f045914f97970bd7f22edbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_04
+    second: {fileID: 2100000, guid: 3d0d2ac1d21851540a1509600fb2cd69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_05
+    second: {fileID: 2100000, guid: 5e4bae786898bff48972a59ba6dcd025, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_06
+    second: {fileID: 2100000, guid: f0e7f4faed7b9264b861b919b830a384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Glass_type_08
+    second: {fileID: 2100000, guid: 0472c7672a59ce340be843aba9de79b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Hot_water_botton
+    second: {fileID: 2100000, guid: 85a7fe91b04f4cc4d83e897d43ebd682, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Jukebox_battons
+    second: {fileID: 2100000, guid: ce0e26f5fe56f344b811a76229f53508, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Jukebox_lighted_parts
+    second: {fileID: 2100000, guid: 1134cfac8fe901547a0eb73e89c03723, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Jukebox_lited_colors_02
+    second: {fileID: 2100000, guid: be195848fc9d7a74d9ed82168f1774bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Jukebox_screen
+    second: {fileID: 2100000, guid: c436dad7a6175b24dbb9b6165ca73f28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Jukebox_screen_big
+    second: {fileID: 2100000, guid: d481492e4f2294b4083d9386aa580e5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Light_metal
+    second: {fileID: 2100000, guid: 550198eb06ab0094bb00bb1fb6f9de9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Lightbolb
+    second: {fileID: 2100000, guid: 0b6ea3044654e7b4da2390975fc88405, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Lightbolb_top
+    second: {fileID: 2100000, guid: 679d47be5af89884eafe506386a9437c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Mini_fridge
+    second: {fileID: 2100000, guid: 76d61454ff95edf45ab9908f6bef8945, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Mini_fridge_back_wall
+    second: {fileID: 2100000, guid: 9d030948196ac034abf2aa8107692d8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Mirror_frame
+    second: {fileID: 2100000, guid: 4ebd57d2af390d34ea14d84394dd10fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Mirror_surface
+    second: {fileID: 2100000, guid: d8444335b29f1dc459cc8b5196206579, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Napkin
+    second: {fileID: 2100000, guid: 3a2bc735c14c9204286d91887c7afce4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Pipe_new
+    second: {fileID: 2100000, guid: 2eef38c400869ea4d94cc72b43b46c20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Pipes
+    second: {fileID: 2100000, guid: 8cba22f600a1d8544a096ae8e1104dc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Room_corners
+    second: {fileID: 2100000, guid: 5e998a528f13119439a8e6c83fbd20af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Shelf_lights
+    second: {fileID: 2100000, guid: 5e95ef8c580210544a8b7576ff399ad2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Table
+    second: {fileID: 2100000, guid: 5ad4eb3a8fedf2441995652963697fae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_Walls_2_
+    second: {fileID: 2100000, guid: 96b8e5a311c2a1c4688b7d3043185284, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_lambert6
+    second: {fileID: 2100000, guid: 850535f5d02422345a968f6d6fba031f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Little_bar_scene_ver_11_colored_neon_sign
+    second: {fileID: 2100000, guid: e25f3893e2b486b48b408046d8b55d63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wine
+    second: {fileID: 2100000, guid: 8a1ca542176eb294dafe51903ac962f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: b96ce3dd5a2aab9489c616bb7ba419dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mini_fridge_door_glass
+    second: {fileID: 2100000, guid: 3e763a3d241a63d4eacbf67b14a7de61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pen_body
+    second: {fileID: 2100000, guid: 1038628eb9997c54b9da7d37c17887d8, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
