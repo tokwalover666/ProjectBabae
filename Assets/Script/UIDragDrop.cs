@@ -3,11 +3,11 @@ using TMPro;
 
 public class UIDragDrop : MonoBehaviour
 {
-    public TextMeshProUGUI textMesh;
+    [SerializeField] TextMeshProUGUI textMesh;
 
-    public Transform sceneCamera;
+    [SerializeField] Transform sceneCamera;
 
-    public LayerMask pickUpLM;
+    [SerializeField] LayerMask pickUpLM;
 
     private ObjectGrabbable objGrabbable;
 
@@ -25,7 +25,6 @@ public class UIDragDrop : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) )
                 {
                     textMesh.text = "Drop";
-                    Debug.Log("Drop mouse click");
                     hasObjectDetected = false;
                 }
             }

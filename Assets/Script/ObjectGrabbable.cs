@@ -8,6 +8,16 @@ public class ObjectGrabbable : MonoBehaviour
     private Transform objectGrabPointTransform;
 
     private PlacementZone currentZone;
+    private FragmentsManager fManager;
+
+    float snapSpeed = 20f;
+
+    bool snapped = false;
+
+    void Start()
+    {
+        fManager = FindAnyObjectByType<FragmentsManager>();
+    }
 
     private void Awake()
     {
@@ -16,30 +26,47 @@ public class ObjectGrabbable : MonoBehaviour
 
     public void Grab(Transform objectGrabPointTransform)
     {
-        Debug.Log(gameObject.name + " grabbed");
-
         this.objectGrabPointTransform = objectGrabPointTransform;
         objectRB.useGravity = false;
+        objectRB.isKinematic = false;
+        snapped = false;
     }
 
     public void Drop()
     {
-        Debug.Log(gameObject.name + " dropped");
+        if (snapped)
+        {
+            FinalizePlacement();
+            return;
+        }
 
         this.objectGrabPointTransform = null;
         objectRB.useGravity = true;
-
-        CheckPlacement();
     }
 
     private void FixedUpdate()
     {
-        if (objectGrabPointTransform != null)
+        if (objectGrabPointTransform == null) return;
+
+        if (currentZone != null && currentZone.tag == gameObject.tag)
         {
-            float lerpSpeed = 8f;
-            Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTransform.position, Time.deltaTime * lerpSpeed);
-            objectRB.MovePosition(newPosition);
+            if (currentZone.GetComponent<Collider>().bounds.Contains(objectGrabPointTransform.position))
+            {
+                SnapToZone();
+                return;
+            }
         }
+
+        snapped = false;
+
+        float lerpSpeed = 8f;
+        Vector3 newPosition = Vector3.Lerp(
+            transform.position,
+            objectGrabPointTransform.position,
+            Time.deltaTime * lerpSpeed
+        );
+
+        objectRB.MovePosition(newPosition);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,7 +76,6 @@ public class ObjectGrabbable : MonoBehaviour
         if (zone != null)
         {
             currentZone = zone;
-            Debug.Log(gameObject.name + " entered zone: " + other.name);
         }
     }
 
@@ -59,32 +85,41 @@ public class ObjectGrabbable : MonoBehaviour
 
         if (zone == currentZone)
         {
-            Debug.Log(gameObject.name + " left zone: " + other.name);
             currentZone = null;
         }
     }
 
-    private void CheckPlacement()
+    void SnapToZone()
     {
-        if (currentZone == null)
-        {
-            Debug.Log("No placement zone detected");
-            return;
-        }
+        snapped = true;
 
-        Debug.Log("Checking placement: Object tag = " + gameObject.tag +
-                  " | Zone tag = " + currentZone.tag);
+        Vector3 newPos = Vector3.Lerp(
+            transform.position,
+            currentZone.transform.position,
+            Time.deltaTime * snapSpeed
+        );
 
-        if (currentZone.tag == gameObject.tag)
-        {
+        Quaternion newRot = Quaternion.Lerp(
+            transform.rotation,
+            currentZone.transform.rotation,
+            Time.deltaTime * snapSpeed
+        );
 
-            transform.position = currentZone.transform.position;
-            transform.rotation = currentZone.transform.rotation;
+        objectRB.MovePosition(newPos);
+        objectRB.MoveRotation(newRot);
+    }
 
-            objectRB.isKinematic = true;
+    void FinalizePlacement()
+    {
+        objectGrabPointTransform = null;
 
-            GetComponent<Collider>().enabled = false;
-        }
+        transform.position = currentZone.transform.position;
+        transform.rotation = currentZone.transform.rotation;
 
+        objectRB.isKinematic = true;
+
+        GetComponent<Collider>().enabled = false;
+
+        fManager.ObjectPlacedCorrectly();
     }
 }

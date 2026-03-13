@@ -4,7 +4,31 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - StackedBooks
+  - R1_StackedTextbooks
+  - R1_StudyTable
+  - R1_Backpack
+  - R1_PictureFrame
+  - R1_PoliticalPosters
+  - R2_BabyCrib
+  - R2_LaundryBasket
+  - R2_BabyBottle
+  - R2_FoldedClothes
+  - R2_DrawingBoard
+  - R3_SecurityUniform
+  - R3_Flashlight
+  - R3_PhotoboothPicture
+  - R3_Lunchbox
+  - R3_WalkieTalkie
+  - R4_Sickle
+  - R4_SackOfRice
+  - R4_Basket
+  - R4_Slippers
+  - R4_WhiteLongSleeve
+  - R5_Photograph1
+  - R5_Photograph2
+  - R5_Photograph3
+  - R5_Photograph4
+  - R5_ProtestPosters
   layers:
   - Default
   - TransparentFX
