@@ -26,6 +26,9 @@ public class FragmentsManager : MonoBehaviour
     void PuzzleCompleted()
     {
         Debug.Log("Room Completed!");
+
+
+        //coroutine after photograph
         room1.SetActive(false);
         room2.SetActive(true);
     }
