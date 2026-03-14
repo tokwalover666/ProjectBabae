@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FragmentsManager : MonoBehaviour
@@ -8,6 +9,9 @@ public class FragmentsManager : MonoBehaviour
     [SerializeField] GameObject captureButton;
 
     [SerializeField] int totalCoreObjects;
+
+    [SerializeField] GameObject whiteShutter;
+    [SerializeField] float flashDuration = 0.25f;
 
     int currentRoomIndex = 0;
     int placedObjects = 0;
@@ -32,6 +36,7 @@ public class FragmentsManager : MonoBehaviour
     public void ObjectPlacedCorrectly()
     {
         placedObjects++;
+        Debug.Log("num of placed obj:" + placedObjects);
 
         if (placedObjects >= totalCoreObjects)
         {
@@ -50,6 +55,17 @@ public class FragmentsManager : MonoBehaviour
         if (!roomComplete) return;
 
         captureButton.SetActive(false);
+
+        StartCoroutine(CaptureSequence());
+    }
+
+    IEnumerator CaptureSequence()
+    {
+        whiteShutter.SetActive(true);
+
+        yield return new WaitForSeconds(flashDuration);
+
+        whiteShutter.SetActive(false);
 
         photographs[currentRoomIndex].SetActive(true);
     }
