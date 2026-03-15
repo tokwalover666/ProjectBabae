@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
 
-    public GameObject settingsMenu, settingsText, howtoText;
+    public GameObject settingsMenu, maingridMenu,
+        settingsText, howtoText;
     public void PlayGame()
     {
         SceneManager.LoadScene("Gamepllay");
@@ -15,13 +16,16 @@ public class ButtonManager : MonoBehaviour
     public void OpenSettings()
     {
         settingsMenu.SetActive(true);
+        maingridMenu.SetActive(false);
+        settingsText.SetActive(true);
+        howtoText.SetActive(false);
         Time.timeScale = 0;
     }
     public void HowSettings()
     {
+        Debug.Log("How settings displayed");
         settingsText.SetActive(false);
         howtoText.SetActive(true);
-        Time.timeScale = 0;
     }
     public void Home()
     {
@@ -29,15 +33,19 @@ public class ButtonManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void Resume()
+    public void ResumeGame()
     {
+        Debug.Log("Resumed");
         settingsMenu.SetActive(false);
+        maingridMenu.SetActive(true);
         Time.timeScale = 1;
 
     }
-    public void Close()
+    public void CloseSettings()
     {
         settingsMenu.SetActive(false);
+
+        Time.timeScale = 1;
     }
     public void Exit()
     {
