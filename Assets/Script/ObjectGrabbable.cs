@@ -50,7 +50,9 @@ public class ObjectGrabbable : MonoBehaviour
 
         if (currentZone != null && currentZone.tag == gameObject.tag)
         {
-            if (currentZone.GetComponent<Collider>().bounds.Contains(objectGrabPointTransform.position))
+            float snapDistance = Vector3.Distance(objectGrabPointTransform.position, currentZone.transform.position);
+
+            if (snapDistance < 0.5f) 
             {
                 SnapToZone();
                 return;
@@ -77,7 +79,7 @@ public class ObjectGrabbable : MonoBehaviour
     {
         PlacementZone zone = other.GetComponent<PlacementZone>();
 
-        if (zone != null)
+        if (zone != null && other.tag == gameObject.tag)
         {
             currentZone = zone;
         }

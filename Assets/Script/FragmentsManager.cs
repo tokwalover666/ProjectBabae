@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FragmentsManager : MonoBehaviour
 {
@@ -85,7 +86,14 @@ public class FragmentsManager : MonoBehaviour
     {
         photographs[currentRoomIndex].SetActive(false);
 
-        GoToNextRoom();
+        if (currentRoomIndex >= rooms.Length - 1)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            GoToNextRoom();
+        }
     }
 
     void GoToNextRoom()
