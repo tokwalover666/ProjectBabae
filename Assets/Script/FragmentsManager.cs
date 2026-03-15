@@ -6,6 +6,7 @@ public class FragmentsManager : MonoBehaviour
     [SerializeField] GameObject[] rooms;
     [SerializeField] GameObject[] fragments;
     [SerializeField] GameObject[] photographs;
+    [SerializeField] GameObject[] roomCharacters; 
 
     [SerializeField] GameObject captureButton;
 
@@ -34,6 +35,10 @@ public class FragmentsManager : MonoBehaviour
         for (int i = 0; i < fragments.Length; i++)
         {
             fragments[i].SetActive(i == 0);
+        }
+        for (int i = 0; i < roomCharacters.Length; i++)
+        {
+            roomCharacters[i].SetActive(false);
         }
 
         captureButton.SetActive(false);
@@ -102,5 +107,11 @@ public class FragmentsManager : MonoBehaviour
         {
             Debug.Log("All rooms completed!");
         }
+    }
+
+    public void ShowPortraitForCurrentRoom(bool show)
+    {
+        if (currentRoomIndex < roomCharacters.Length)
+            roomCharacters[currentRoomIndex].SetActive(show);
     }
 }

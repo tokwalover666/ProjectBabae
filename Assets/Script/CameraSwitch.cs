@@ -6,6 +6,7 @@ public class CameraSwitch : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera firstPOV;
     [SerializeField] CinemachineVirtualCamera staticPOV;
     [SerializeField] PlayerController playerController;
+    [SerializeField] FragmentsManager fragmentsManager;
     bool usingFirst = true;
 
     void Start()
@@ -25,14 +26,19 @@ public class CameraSwitch : MonoBehaviour
             staticPOV.Priority = 5;
 
             playerController.LockCursor();
+
+            if (fragmentsManager != null)
+                fragmentsManager.ShowPortraitForCurrentRoom(false);
         }
         else
         {
             firstPOV.Priority = 5;
             staticPOV.Priority = 10;
 
-            Debug.Log("cursor unlock");
             playerController.UnlockCursor();
+
+            if (fragmentsManager != null)
+                fragmentsManager.ShowPortraitForCurrentRoom(true);
         }
     }
 }
