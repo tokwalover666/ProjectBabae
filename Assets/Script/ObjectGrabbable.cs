@@ -69,6 +69,10 @@ public class ObjectGrabbable : MonoBehaviour
         objectRB.MovePosition(newPosition);
     }
 
+    public bool CanBePlaced()
+    {
+        return currentZone != null && currentZone.tag == gameObject.tag;
+    }
     private void OnTriggerEnter(Collider other)
     {
         PlacementZone zone = other.GetComponent<PlacementZone>();

@@ -4,35 +4,53 @@ using TMPro;
 public class UIDragDrop : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textMesh;
-
     [SerializeField] Transform sceneCamera;
-
     [SerializeField] LayerMask pickUpLM;
 
     private ObjectGrabbable objGrabbable;
-
-    private bool hasObjectDetected = true;
+    private bool holdingObject = false;
 
     private void Update()
     {
         float pickUpDistance = 2f;
-        if (Physics.Raycast(sceneCamera.position, sceneCamera.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLM))
-        {
-            if (raycastHit.transform.TryGetComponent(out objGrabbable) && hasObjectDetected == true)
-            {
-                textMesh.text = "Pick Up";
 
-                if (Input.GetMouseButtonDown(0) )
+        if (!holdingObject)
+        {
+            if (Physics.Raycast(sceneCamera.position, sceneCamera.forward, out RaycastHit hit, pickUpDistance, pickUpLM))
+            {
+                if (hit.transform.TryGetComponent(out objGrabbable))
                 {
-                    textMesh.text = "Drop";
-                    hasObjectDetected = false;
+                    textMesh.text = "Pick Up";
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        holdingObject = true;
+                        textMesh.text = "";
+                    }
                 }
+            }
+            else
+            {
+                textMesh.text = "";
             }
         }
         else
         {
-            hasObjectDetected = true;
-            textMesh.text = "";
+            if (objGrabbable != null && objGrabbable.CanBePlaced())
+            {
+                textMesh.text = "Drop";
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    holdingObject = false;
+                    objGrabbable = null;
+                    textMesh.text = "";
+                }
+            }
+            else
+            {
+                textMesh.text = "";
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ public class FragmentsManager : MonoBehaviour
     [SerializeField] int totalCoreObjects;
 
     [SerializeField] GameObject whiteShutter;
-    [SerializeField] float flashDuration = 0.25f;
+    [SerializeField] float flashDuration = 0.85f;
 
     int currentRoomIndex = 0;
     int placedObjects = 0;
