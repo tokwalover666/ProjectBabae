@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float playerSpeed;
     [SerializeField] float mouseSensitivity;
+    [SerializeField] private AudioClip footstepSound;
+    [SerializeField] private float stepInterval = 0.45f;
+
+    private float stepTimer;
 
     public Transform player;
 
@@ -47,6 +51,23 @@ public class PlayerController : MonoBehaviour
         transform.localEulerAngles = new Vector3(cameraVerticalRotation, transform.localEulerAngles.y, 0f);
 
         //cursor();
+
+        bool isMoving = movementInput.magnitude > 0.1f && _cc.isGrounded;
+
+        if (isMoving)
+        {
+            stepTimer -= Time.deltaTime;
+
+            if (stepTimer <= 0f)
+            {
+                AudioManager.Instance.PlaySFX(footstepSound);
+                stepTimer = stepInterval;
+            }
+        }
+        else
+        {
+            stepTimer = 0f;
+        }
     }
 
     void cursor()
