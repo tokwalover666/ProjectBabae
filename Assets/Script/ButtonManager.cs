@@ -6,11 +6,18 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject settingsMenu, maingridMenu,
         settingsText, howtoText;
+    void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene("Gamepllay");
         Time.timeScale = 1;
         string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OpenSettings()
