@@ -11351,6 +11351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraSwitch
   firstPOV: {fileID: 888497609}
   staticPOV: {fileID: 91102062}
+  playerController: {fileID: 0}
+  fragmentsManager: {fileID: 0}
 --- !u!4 &2105117307
 Transform:
   m_ObjectHideFlags: 0
@@ -11399,14 +11401,18 @@ MonoBehaviour:
   - {fileID: 1627842245}
   - {fileID: 639507236}
   - {fileID: 1751755527}
+  fragments: []
   photographs:
   - {fileID: 430149434}
   - {fileID: 1867954024}
   - {fileID: 1427051731}
   - {fileID: 2062198467}
   - {fileID: 1278690958}
+  roomCharacters: []
   captureButton: {fileID: 913520426}
   totalCoreObjects: 2
+  whiteShutter: {fileID: 0}
+  flashDuration: 0.85
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
