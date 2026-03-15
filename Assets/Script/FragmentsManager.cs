@@ -88,7 +88,7 @@ public class FragmentsManager : MonoBehaviour
 
         if (currentRoomIndex >= rooms.Length - 1)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Main Menu");
         }
         else
         {

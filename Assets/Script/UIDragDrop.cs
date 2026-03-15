@@ -18,15 +18,12 @@ public class UIDragDrop : MonoBehaviour
         {
             if (Physics.Raycast(sceneCamera.position, sceneCamera.forward, out RaycastHit hit, pickUpDistance, pickUpLM))
             {
-                ObjectGrabbable target;
-
-                if (hit.transform.TryGetComponent(out target))
+                if (hit.transform.TryGetComponent(out objGrabbable))
                 {
                     textMesh.text = "Pick Up";
 
                     if (Input.GetMouseButtonDown(0))
                     {
-                        objGrabbable = target;
                         holdingObject = true;
                         textMesh.text = "";
                     }
