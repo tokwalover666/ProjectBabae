@@ -5497,7 +5497,7 @@ Transform:
   m_GameObject: {fileID: 536413799}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69244105, y: -0.14326514, z: -0.1432652, w: 0.69244176}
-  m_LocalPosition: {x: 1.447, y: 0.893, z: 3.108}
+  m_LocalPosition: {x: 0.784, y: 0.732, z: 3.411}
   m_LocalScale: {x: 1.2913516, y: 1.2913516, z: 1.2913516}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7414,13 +7414,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697706196}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10642797, y: -0.73384506, z: -0.073619865, w: -0.66687673}
-  m_LocalPosition: {x: -5.579, y: 1.277, z: 8.116}
-  m_LocalScale: {x: 0.027726995, y: 0.027727, z: 0.027727008}
+  m_LocalRotation: {x: 0.48661447, y: -0.54146916, z: -0.5007592, w: -0.46824983}
+  m_LocalPosition: {x: -5.659043, y: 1.2989556, z: 7.403133}
+  m_LocalScale: {x: 0.031647593, y: 0.031647597, z: 0.031647608}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6703407241259081952}
-  m_LocalEulerAnglesHint: {x: -165.522, y: -84.08899, z: 176.565}
+  m_LocalEulerAnglesHint: {x: -93.619, y: -18.214996, z: 113.224}
 --- !u!54 &697706198
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10572,13 +10572,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005789673}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5237449, y: 0.47506934, z: 0.47506943, w: 0.5237457}
-  m_LocalPosition: {x: -1.8280011, y: 1.8469996, z: -1.3970016}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -1.828, y: 1.8469996, z: -1.358}
   m_LocalScale: {x: 1.327, y: 1.327, z: 1.327}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 521566216}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 84.42}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!65 &1005789675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16221,7 +16221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1503630948
 Transform:
   m_ObjectHideFlags: 0
@@ -20549,7 +20549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1816854900
 Transform:
   m_ObjectHideFlags: 0
@@ -24776,9 +24776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FragmentsManager
   rooms:
+  - {fileID: 1816854899}
   - {fileID: 1503630947}
   - {fileID: 494033909}
-  - {fileID: 1816854899}
   - {fileID: 25283624}
   - {fileID: 1751755527}
   fragments:
@@ -32094,7 +32094,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.04500701, y: 0.021726336, z: 0.0014903212}
   m_Center: {x: -0.000000002384187, y: -0.000000011761211, z: 0.0026795887}
