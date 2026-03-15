@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, -90f, 90f);
         transform.localEulerAngles = new Vector3(cameraVerticalRotation, transform.localEulerAngles.y, 0f);
 
-        cursor();
+        //cursor();
     }
 
     void cursor()
@@ -64,15 +64,28 @@ public class PlayerController : MonoBehaviour
             lockedCursor = false;
         }
     }
-
-/*    private void OnApplicationFocus(bool ApplicationIsBack)
+    public void LockCursor()
     {
-        if (ApplicationIsBack == true)
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        lockedCursor = true;
+    }
+
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        lockedCursor = false;
+        Debug.Log("cursor unlock");
+    }
+    /*    private void OnApplicationFocus(bool ApplicationIsBack)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        
-    }*/
+            if (ApplicationIsBack == true)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+
+        }*/
 
 }

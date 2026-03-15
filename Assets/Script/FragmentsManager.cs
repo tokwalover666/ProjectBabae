@@ -4,6 +4,7 @@ using UnityEngine;
 public class FragmentsManager : MonoBehaviour
 {
     [SerializeField] GameObject[] rooms;
+    [SerializeField] GameObject[] fragments;
     [SerializeField] GameObject[] photographs;
 
     [SerializeField] GameObject captureButton;
@@ -28,6 +29,11 @@ public class FragmentsManager : MonoBehaviour
         for (int i = 0; i < photographs.Length; i++)
         {
             photographs[i].SetActive(false);
+        }
+
+        for (int i = 0; i < fragments.Length; i++)
+        {
+            fragments[i].SetActive(i == 0);
         }
 
         captureButton.SetActive(false);
@@ -80,12 +86,14 @@ public class FragmentsManager : MonoBehaviour
     void GoToNextRoom()
     {
         rooms[currentRoomIndex].SetActive(false);
+        fragments[currentRoomIndex].SetActive(false);
 
         currentRoomIndex++;
 
         if (currentRoomIndex < rooms.Length)
         {
             rooms[currentRoomIndex].SetActive(true);
+            fragments[currentRoomIndex].SetActive(true);
 
             placedObjects = 0;
             roomComplete = false;

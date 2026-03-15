@@ -5,7 +5,7 @@ public class CameraSwitch : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera firstPOV;
     [SerializeField] CinemachineVirtualCamera staticPOV;
-
+    [SerializeField] PlayerController playerController;
     bool usingFirst = true;
 
     void Start()
@@ -23,11 +23,16 @@ public class CameraSwitch : MonoBehaviour
         {
             firstPOV.Priority = 10;
             staticPOV.Priority = 5;
+
+            playerController.LockCursor();
         }
         else
         {
             firstPOV.Priority = 5;
             staticPOV.Priority = 10;
+
+            Debug.Log("cursor unlock");
+            playerController.UnlockCursor();
         }
     }
 }
