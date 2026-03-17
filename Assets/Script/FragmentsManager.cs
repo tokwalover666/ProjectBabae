@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FragmentsManager : MonoBehaviour
 {
@@ -9,12 +10,13 @@ public class FragmentsManager : MonoBehaviour
     [SerializeField] GameObject[] photographs;
     [SerializeField] GameObject[] roomCharacters; 
 
+
     [SerializeField] GameObject captureButton;
 
     [SerializeField] int totalCoreObjects;
-
-    [SerializeField] GameObject whiteShutter;
-    [SerializeField] float flashDuration = 0.85f;
+    [SerializeField] AudioClip shutterSound;
+    [SerializeField] Image whiteShutter;
+    [SerializeField] float flashDuration = 1f;
 
     int currentRoomIndex = 0;
     int placedObjects = 0;
@@ -73,13 +75,40 @@ public class FragmentsManager : MonoBehaviour
 
     IEnumerator CaptureSequence()
     {
-        whiteShutter.SetActive(true);
+        whiteShutter.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(flashDuration);
+        Color c = whiteShutter.color;
+        c.a = 1f;
+        whiteShutter.color = c;
 
-        whiteShutter.SetActive(false);
+        AudioManager.Instance.PlaySFX(shutterSound);
 
-        photographs[currentRoomIndex].SetActive(true);
+        yield return new WaitForSeconds(0.08f);
+
+        float fadeTime = 0.8f;
+        float t = 0;
+        bool photoShown = false;
+
+        while (t < fadeTime)
+        {
+            t += Time.deltaTime;
+
+            float progress = t / fadeTime;
+
+            c.a = 1f - progress;
+            whiteShutter.color = c;
+
+            if (!photoShown && progress >= 0.05f)
+            {
+                photographs[currentRoomIndex].SetActive(true);
+                photoShown = true;
+            }
+
+            yield return null;
+        }
+
+        c.a = 0f;
+        whiteShutter.color = c;
     }
 
     public void ClickPhotograph()
@@ -88,6 +117,15 @@ public class FragmentsManager : MonoBehaviour
 
         if (currentRoomIndex >= rooms.Length - 1)
         {
+            whiteShutter.gameObject.SetActive(true);
+
+            Color c = whiteShutter.color;
+            c.a = 1f;
+            whiteShutter.color = c;
+
+            float fadeTime = 0.8f;
+            float t = 0;
+            bool photoShown = false;
             SceneManager.LoadScene("Main Menu");
         }
         else
