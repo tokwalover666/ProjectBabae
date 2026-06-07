@@ -7,10 +7,13 @@ public class CameraSwitch : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera staticPOV;
     [SerializeField] PlayerController playerController;
     [SerializeField] FragmentsManager fragmentsManager;
-    bool usingFirst = true;
-
+    bool usingFirst;
+    Animator anim;
     void Start()
     {
+        GameObject barText = GameObject.Find("TAB");
+        anim = barText.GetComponent<Animator>();
+
         usingFirst = true;
         firstPOV.Priority = 10;
         staticPOV.Priority = 5;
@@ -22,6 +25,10 @@ public class CameraSwitch : MonoBehaviour
 
         if (usingFirst)
         {
+            if (FragmentsManager.roomComplete == true)
+            {
+                anim.SetBool("isGlowing", true);
+            }
             firstPOV.Priority = 10;
             staticPOV.Priority = 5;
 
@@ -32,6 +39,8 @@ public class CameraSwitch : MonoBehaviour
         }
         else
         {
+            anim.SetBool("isGlowing", false);
+
             firstPOV.Priority = 5;
             staticPOV.Priority = 10;
 

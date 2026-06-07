@@ -8,7 +8,7 @@ public class LensTransition : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] CameraSwitch cameraSwitch;
 
-    private bool isTransitioning = false;
+    public static bool isTransitioning = false;
 
     private void Update()
     {

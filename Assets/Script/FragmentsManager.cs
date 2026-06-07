@@ -17,14 +17,20 @@ public class FragmentsManager : MonoBehaviour
     [SerializeField] AudioClip shutterSound;
     [SerializeField] Image whiteShutter;
     [SerializeField] float flashDuration = 1f;
+     Animator anim;
 
     int currentRoomIndex = 0;
     int placedObjects = 0;
 
-    bool roomComplete = false;
+    public static bool roomComplete = false;
+
 
     void Start()
     {
+        GameObject barText = GameObject.Find("TAB");
+        anim  = barText.GetComponent<Animator>();
+
+        anim.SetBool("isGlowing", false);
         for (int i = 0; i < rooms.Length; i++)
         {
             rooms[i].SetActive(i == 0);
@@ -55,7 +61,10 @@ public class FragmentsManager : MonoBehaviour
         if (placedObjects >= totalCoreObjects)
         {
             PuzzleCompleted();
+            anim.SetBool("isGlowing", true);
         }
+        
+
     }
 
     void PuzzleCompleted()
